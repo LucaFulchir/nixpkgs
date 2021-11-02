@@ -356,7 +356,7 @@
     "heatmiser" = ps: with ps; [ ]; # missing inputs: heatmiserV3
     "heos" = ps: with ps; [ pyheos ];
     "here_travel_time" = ps: with ps; [ herepy ];
-    "hikvision" = ps: with ps; [ ]; # missing inputs: pyhik
+    "hikvision" = ps: with ps; [ pyhik ];
     "hikvisioncam" = ps: with ps; [ hikvision ];
     "hisense_aehw4a1" = ps: with ps; [ pyaehw4a1 ];
     "history" = ps: with ps; [ aiohttp-cors sqlalchemy ];

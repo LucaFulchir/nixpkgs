@@ -5693,6 +5693,8 @@ in {
   pygti = callPackage ../development/python-modules/pygti { };
 
   pyheos = callPackage ../development/python-modules/pyheos { };
+  
+  pyhik = callPackage ../development/python-modules/pyhik { };
 
   pyhiveapi = callPackage ../development/python-modules/pyhiveapi { };
 
