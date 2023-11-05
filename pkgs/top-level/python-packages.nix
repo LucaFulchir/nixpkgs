@@ -15257,6 +15257,8 @@ self: super: with self; {
 
   upb-lib = callPackage ../development/python-modules/upb-lib { };
 
+  upbge-uplogic = callPackage ../applications/misc/upbge-uplogic { };
+
   upcloud-api = callPackage ../development/python-modules/upcloud-api { };
 
   update_checker = callPackage ../development/python-modules/update_checker { };

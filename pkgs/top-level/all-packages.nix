@@ -30694,6 +30694,20 @@ with pkgs;
     inherit (darwin.apple_sdk.frameworks) Cocoa CoreGraphics ForceFeedback OpenAL OpenGL;
   };
 
+  upbge  = callPackage  ../applications/misc/upbge {
+    # LLVM 11 crashes when compiling GHOST_SystemCocoa.mm
+    stdenv = if stdenv.isDarwin then llvmPackages_10.stdenv else stdenv;
+    inherit (darwin.apple_sdk.frameworks) Cocoa CoreGraphics ForceFeedback OpenAL OpenGL;
+  };
+
+  upbge-addons  = callPackage  ../applications/misc/upbge-addons { };
+  upbge-logicnodes  = callPackage  ../applications/misc/upbge-logicnodes { };
+  upbge-uplogic  = callPackage  ../applications/misc/upbge-uplogic { };
+
+  blender-addons-contrib  = callPackage  ../applications/misc/blender-addons-contrib { };
+
+  blender-with-packages = callPackage ../applications/misc/blender/wrapper.nix { };
+
   blender-hip = blender.override { hipSupport = true; };
 
   blflash = callPackage ../tools/misc/blflash { };
